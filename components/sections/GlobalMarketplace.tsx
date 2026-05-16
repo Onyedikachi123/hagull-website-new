@@ -8,7 +8,7 @@ import Image from 'next/image'
 export default function GlobalMarketplace() {
   return (
     <section className="section-pad bg-section-subtle" aria-labelledby="marketplace-heading">
-      <div className="container-fluid max-w-6xl">
+      <div className="container-fluid">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           
           {/* Left Column - Table */}
@@ -22,7 +22,7 @@ export default function GlobalMarketplace() {
                 </div>
               </div>
 
-              <div className="bg-white border border-border rounded-2xl overflow-hidden shadow-card">
+              <div className="bg-white border border-border rounded-2xl overflow-x-auto shadow-card">
                 <table className="w-full text-sm text-left">
                   <thead className="bg-hagull-50/50 text-xs text-muted-foreground border-b border-border">
                     <tr>

@@ -28,7 +28,7 @@ const TRUST_FEATURES = [
 export default function TrustFeatures() {
   return (
     <section className="section-pad bg-section-subtle" aria-labelledby="trust-features-heading">
-      <div className="container-fluid max-w-6xl">
+      <div className="container-fluid">
         <FadeIn direction="up" className="text-center max-w-2xl mx-auto mb-14">
           <h2
             id="trust-features-heading"

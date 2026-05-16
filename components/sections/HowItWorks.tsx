@@ -15,7 +15,7 @@ const NEW_STEPS = [
 export default function HowItWorks() {
   return (
     <section className="section-pad bg-white" aria-labelledby="how-heading">
-      <div className="container-fluid max-w-7xl">
+      <div className="container-fluid">
         <FadeIn direction="up" className="text-center mx-auto mb-20">
           <h2
             id="how-heading"

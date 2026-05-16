@@ -9,7 +9,7 @@ export default function CTABanner() {
       className="section-pad bg-white"
       aria-labelledby="cta-heading"
     >
-      <div className="container-fluid max-w-6xl">
+      <div className="container-fluid">
         <FadeIn direction="up">
           <div className="bg-hagull-600 rounded-[2rem] p-12 md:p-20 text-center relative overflow-hidden shadow-glow-lg">
             {/* Background elements */}
@@ -23,7 +23,7 @@ export default function CTABanner() {
               >
                 Start trading safely worldwide
               </h2>
-              <p className="text-base md:text-lg text-white/90 max-w-xl mx-auto leading-relaxed mb-10">
+              <p className="text-base md:text-lg text-white/90 mx-auto leading-relaxed mb-10">
                 Join the premier financial infrastructure for global P2P exchange. Your first $1,000 in trades are fee-free.
               </p>
 

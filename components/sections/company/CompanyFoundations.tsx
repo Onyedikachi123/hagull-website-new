@@ -6,7 +6,7 @@ import { COMPANY_FOUNDATIONS } from '@/constants/company'
 export default function CompanyFoundations() {
   return (
     <section className="section-pad bg-white" aria-labelledby="foundations-heading">
-      <div className="container-fluid max-w-6xl">
+      <div className="container-fluid">
         <FadeIn direction="up" className="text-center mb-16">
           <h2 id="foundations-heading" className="text-3xl md:text-4xl font-extrabold text-foreground tracking-tight">
             Foundations of Excellence

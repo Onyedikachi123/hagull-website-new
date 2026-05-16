@@ -64,14 +64,17 @@ export default function Navbar() {
     return () => { document.body.style.overflow = '' }
   }, [mobileOpen])
 
-  const isActive = (href: string) => pathname === href
+  const isActive = (href: string) => {
+    if (href === '/') return pathname === '/'
+    return pathname === href || pathname.startsWith(`${href}/`)
+  }
 
   return (
     <>
       <header
         className={cn(
           'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-          scrolled
+          scrolled || pathname !== '/'
             ? 'bg-white/90 dark:bg-surface-950/90 backdrop-blur-xl border-b border-border shadow-sm'
             : 'bg-transparent',
         )}
@@ -84,7 +87,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link
             href="/"
-            className="flex items-center gap-2 shrink-0 focus-brand rounded-lg"
+            className="flex items-center gap-2 shrink-0 focus-brand"
             aria-label="Hagull — Home"
           >
             <div className="relative w-[110px] h-[32px]">
@@ -110,11 +113,9 @@ export default function Navbar() {
                         'relative px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-200 focus-brand flex items-center gap-1.5',
                         isActive(href) || children.some(c => isActive(c.href))
                           ? 'text-hagull-500'
-                          : scrolled
-                            ? 'text-foreground/70 hover:text-foreground hover:bg-muted'
-                            : 'text-white/80 hover:text-white hover:bg-white/10',
+                          : 'text-black hover:text-hagull-600 hover:bg-black/5',
                       )}
-                      aria-current={isActive(href) ? 'page' : undefined}
+                      aria-current={isActive(href) || children.some(c => isActive(c.href)) ? 'page' : undefined}
                     >
                       {label}
                       <ChevronDown size={14} className="opacity-70 group-hover:rotate-180 transition-transform duration-200" />
@@ -135,7 +136,7 @@ export default function Navbar() {
                               'block px-4 py-2.5 text-sm font-medium rounded-lg transition-colors duration-200',
                               isActive(child.href)
                                 ? 'text-hagull-500 bg-hagull-50 dark:bg-hagull-900/20'
-                                : 'text-foreground/80 hover:text-foreground hover:bg-muted'
+                                : 'text-black hover:text-hagull-600 hover:bg-muted'
                             )}
                           >
                             {child.label}
@@ -151,9 +152,7 @@ export default function Navbar() {
                       'relative px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-200 focus-brand',
                       isActive(href)
                         ? 'text-hagull-500'
-                        : scrolled
-                          ? 'text-foreground/70 hover:text-foreground hover:bg-muted'
-                          : 'text-white/80 hover:text-white hover:bg-white/10',
+                        : 'text-black hover:text-hagull-600 hover:bg-black/5',
                     )}
                     aria-current={isActive(href) ? 'page' : undefined}
                   >
@@ -176,9 +175,7 @@ export default function Navbar() {
               href="/login"
               className={cn(
                 'px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-200 focus-brand',
-                scrolled
-                  ? 'text-foreground/70 hover:text-foreground hover:bg-muted'
-                  : 'text-white/80 hover:text-white hover:bg-white/10',
+                'text-black hover:text-hagull-600 hover:bg-black/5',
               )}
             >
               Log in
@@ -201,7 +198,7 @@ export default function Navbar() {
               'lg:hidden p-2.5 rounded-xl transition-colors duration-200 focus-brand',
               scrolled
                 ? 'text-foreground hover:bg-muted'
-                : 'text-white hover:bg-white/10',
+                : 'text-foreground hover:bg-black/5',
             )}
             onClick={() => setMobileOpen((prev) => !prev)}
             aria-label={mobileOpen ? 'Close navigation menu' : 'Open navigation menu'}
@@ -261,7 +258,7 @@ export default function Navbar() {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="fixed top-16 left-4 right-4 z-50 rounded-2xl bg-white/95 dark:bg-surface-900/95 backdrop-blur-xl border border-border shadow-xl lg:hidden overflow-hidden"
+              className="fixed top-16 md:top-[72px] left-4 right-4 z-50 rounded-2xl bg-white/98 dark:bg-surface-900/98 backdrop-blur-2xl border border-border shadow-2xl lg:hidden overflow-hidden"
             >
               <div className="p-4">
                 {/* Nav Links */}
@@ -274,11 +271,11 @@ export default function Navbar() {
                             href={href}
                             className={cn(
                               'flex items-center justify-between w-full px-4 py-3 text-sm font-medium rounded-xl transition-colors duration-200',
-                              isActive(href)
+                              isActive(href) || children.some(c => isActive(c.href))
                                 ? 'text-hagull-500 bg-hagull-50 dark:bg-hagull-900/20'
-                                : 'text-foreground/80 hover:text-foreground hover:bg-muted',
+                                : 'text-black hover:text-hagull-600 hover:bg-muted',
                             )}
-                            aria-current={isActive(href) ? 'page' : undefined}
+                            aria-current={isActive(href) || children.some(c => isActive(c.href)) ? 'page' : undefined}
                             onClick={closeMobile}
                           >
                             {label}
@@ -293,7 +290,7 @@ export default function Navbar() {
                                   'flex items-center justify-between w-full px-4 py-2.5 text-sm font-medium rounded-xl transition-colors duration-200',
                                   isActive(child.href)
                                     ? 'text-hagull-500 bg-hagull-50 dark:bg-hagull-900/20'
-                                    : 'text-foreground/80 hover:text-foreground hover:bg-muted',
+                                    : 'text-black hover:text-hagull-600 hover:bg-muted',
                                 )}
                                 onClick={closeMobile}
                               >
@@ -309,7 +306,7 @@ export default function Navbar() {
                             'flex items-center justify-between w-full px-4 py-3 text-sm font-medium rounded-xl transition-colors duration-200',
                             isActive(href)
                               ? 'text-hagull-500 bg-hagull-50 dark:bg-hagull-900/20'
-                              : 'text-foreground/80 hover:text-foreground hover:bg-muted',
+                              : 'text-black hover:text-hagull-600 hover:bg-muted',
                           )}
                           aria-current={isActive(href) ? 'page' : undefined}
                           onClick={closeMobile}

@@ -44,7 +44,7 @@ export default function StatsBar() {
       />
 
       <div className="relative container-fluid py-10">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0 lg:divide-x lg:divide-white/20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-8 lg:gap-0 lg:divide-x lg:divide-white/20">
           {PLATFORM_STATS.map((stat, i) => (
             <motion.div
               key={stat.label}

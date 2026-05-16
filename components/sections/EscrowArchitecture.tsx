@@ -15,7 +15,7 @@ export default function EscrowArchitecture() {
     <section className="section-pad bg-surface-950 text-white overflow-hidden relative" aria-labelledby="escrow-heading">
       <div className="absolute inset-0 bg-hero-mesh opacity-20 pointer-events-none" />
       
-      <div className="container-fluid max-w-6xl relative z-10">
+      <div className="container-fluid relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           
           {/* Left Content */}

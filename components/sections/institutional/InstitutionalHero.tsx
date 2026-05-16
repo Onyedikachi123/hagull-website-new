@@ -7,7 +7,7 @@ import Image from 'next/image'
 export default function InstitutionalHero() {
   return (
     <section className="relative pt-32 pb-24 bg-section-subtle overflow-hidden" aria-labelledby="hero-heading">
-      <div className="container-fluid max-w-7xl relative z-10">
+      <div className="container-fluid relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           
           <div className="max-w-2xl">
@@ -57,13 +57,13 @@ export default function InstitutionalHero() {
           </div>
 
           <motion.div
-            className="relative w-full aspect-square flex items-center justify-center lg:justify-end"
+            className="relative w-full aspect-video md:aspect-square flex items-center justify-center lg:justify-end"
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <div className="absolute right-[-10%] top-1/2 -translate-y-1/2 w-[120%] aspect-square rounded-full bg-white/50 blur-3xl border border-white/20 shadow-2xl" />
-            <div className="relative w-full h-full rounded-full overflow-hidden border border-border/50 shadow-glow bg-muted">
+            <div className="absolute right-[-10%] top-1/2 -translate-y-1/2 w-[120%] aspect-square rounded-full bg-white/50 blur-3xl border border-white/20 shadow-2xl hidden md:block" />
+            <div className="relative w-full h-full max-w-[500px] rounded-2xl md:rounded-full overflow-hidden border border-border/50 shadow-glow bg-muted">
               <Image 
                 src="/escrow.jpg" 
                 alt="Microchip circuit board" 

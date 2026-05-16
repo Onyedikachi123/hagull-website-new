@@ -29,7 +29,7 @@ const TESTIMONIALS = [
 export default function Testimonials() {
   return (
     <section className="section-pad bg-white" aria-labelledby="testimonials-heading">
-      <div className="container-fluid max-w-6xl">
+      <div className="container-fluid">
         <FadeIn direction="up" className="text-center max-w-2xl mx-auto mb-14">
           <h2
             id="testimonials-heading"

@@ -8,7 +8,7 @@ import Link from 'next/link'
 export default function Departments() {
   return (
     <section className="section-pad bg-section-subtle" aria-labelledby="departments-heading">
-      <div className="container-fluid max-w-6xl">
+      <div className="container-fluid">
         <FadeIn direction="up" className="text-center max-w-2xl mx-auto mb-16">
           <h2
             id="departments-heading"

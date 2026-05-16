@@ -319,12 +319,12 @@
 
   /* Container */
   .container-fluid {
-    @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    @apply w-full max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16;
   }
 
   /* Section padding */
   .section-pad {
-    @apply py-20 md:py-28;
+    @apply py-16 sm:py-20 md:py-28 lg:py-32 xl:py-40;
   }
 
   /* Card hover */

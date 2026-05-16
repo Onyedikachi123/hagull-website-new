@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 export default function CompanyHero() {
   return (
-    <section className="relative w-full min-h-[85vh] flex items-center bg-surface-950 overflow-hidden" aria-label="Company hero section">
+    <section className="relative w-full min-h-[70vh] md:min-h-[85vh] flex items-center bg-surface-950 overflow-hidden" aria-label="Company hero section">
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40 mix-blend-luminosity"
@@ -14,7 +14,7 @@ export default function CompanyHero() {
       <div className="absolute inset-0 bg-gradient-to-r from-surface-950/90 via-surface-950/60 to-transparent" />
       <div className="absolute inset-0 bg-gradient-to-t from-surface-950 via-transparent to-transparent" />
 
-      <div className="container-fluid relative z-10 max-w-7xl">
+      <div className="container-fluid relative z-10">
         <div className="max-w-2xl text-white">
           <motion.div
             initial={{ opacity: 0, y: 10 }}

@@ -9,7 +9,7 @@ import Link from 'next/link'
 export default function CompanyLeadership() {
   return (
     <section className="section-pad bg-section-subtle" aria-labelledby="leadership-heading">
-      <div className="container-fluid max-w-6xl">
+      <div className="container-fluid">
         <FadeIn direction="up" className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div className="max-w-xl">
             <h2 id="leadership-heading" className="text-3xl md:text-4xl font-extrabold text-foreground tracking-tight mb-4">

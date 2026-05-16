@@ -6,7 +6,7 @@ import Image from 'next/image'
 export default function CompanyMission() {
   return (
     <section className="section-pad bg-white" aria-labelledby="mission-heading">
-      <div className="container-fluid max-w-6xl">
+      <div className="container-fluid">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           
           {/* Left Image */}

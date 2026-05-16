@@ -7,25 +7,25 @@ import { motion } from 'framer-motion'
 export default function Hero() {
   return (
     <section
-      className="relative w-full pt-32 pb-20 bg-white overflow-hidden"
+      className="relative w-full pt-24 md:pt-32 pb-16 md:pb-24 bg-white overflow-hidden"
       aria-label="Hero section"
     >
-      <div className="container-fluid max-w-7xl relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="container-fluid relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
           {/* Left Content */}
-          <div className="max-w-2xl">
+          <div className="max-w-3xl lg:max-w-none">
             <motion.h1
-              className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-foreground leading-[1.1] tracking-tight mb-6"
+              className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-extrabold text-foreground leading-[1.1] tracking-tight mb-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
             >
-              Global P2P <span className="text-hagull-500">Infrastructure</span><br />for Every Currency
+              Global P2P <span className="text-hagull-500">Infrastructure</span><br className="hidden sm:block" />for Every Currency
             </motion.h1>
 
             <motion.p
-              className="text-base md:text-lg text-muted-foreground leading-relaxed mb-8 pr-4"
+              className="text-base md:text-lg xl:text-xl text-muted-foreground leading-relaxed mb-8 pr-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
@@ -41,16 +41,10 @@ export default function Hero() {
             >
               <Link
                 href="/register"
-                className="px-8 py-3.5 rounded-xl bg-accent-500 hover:bg-accent-600 text-white font-bold text-sm shadow-md transition-colors duration-200"
+                className="px-8 py-4 rounded-xl bg-accent-500 hover:bg-accent-600 text-white font-bold text-sm md:text-base shadow-lg hover:shadow-accent/40 transition-all duration-200"
               >
                 Start Trading
               </Link>
-              {/* <Link
-                href="/currencies"
-                className="px-8 py-3.5 rounded-xl border border-border text-foreground hover:bg-muted font-bold text-sm transition-colors duration-200"
-              >
-                View Currencies
-              </Link> */}
             </motion.div>
           </div>
 
@@ -61,16 +55,16 @@ export default function Hero() {
             animate={{ opacity: 1, x: 0, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            <motion.div 
-              className="relative w-full max-w-[600px] rounded-2xl overflow-hidden shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] border border-border/50 bg-white"
+            <motion.div
+              className="relative w-full max-w-[640px] xl:max-w-[720px] rounded-2xl overflow-hidden shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] border border-border/50 bg-white"
               whileHover={{ y: -8, boxShadow: "0 30px 60px -15px rgba(0,0,0,0.2)" }}
               transition={{ duration: 0.4, ease: "easeOut" }}
             >
               <Image
                 src="/dashboard-hero.png"
                 alt="Hagull Dashboard Interface"
-                width={1200}
-                height={900}
+                width={1400}
+                height={1050}
                 className="w-full h-auto object-cover transition-transform duration-700 hover:scale-[1.02]"
                 priority
               />

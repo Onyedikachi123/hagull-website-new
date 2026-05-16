@@ -8,11 +8,11 @@ import { ArrowDown } from 'lucide-react'
 export default function CareersHero() {
   return (
     <section className="relative w-full pt-32 pb-20 bg-white overflow-hidden" aria-label="Careers hero section">
-      <div className="container-fluid max-w-7xl relative z-10">
+      <div className="container-fluid relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          
+
           {/* Left Content */}
-          <div className="max-w-xl">
+          <div>
             <motion.p
               className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-4"
               initial={{ opacity: 0, y: 10 }}
@@ -21,7 +21,7 @@ export default function CareersHero() {
             >
               We Are Hiring
             </motion.p>
-            
+
             <motion.h1
               className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-foreground leading-[1.1] tracking-tight mb-6"
               initial={{ opacity: 0, y: 20 }}
@@ -65,7 +65,7 @@ export default function CareersHero() {
             {/* Inner background to simulate the dark teal frame */}
             <div className="absolute inset-0 bg-hagull-900/10 mix-blend-multiply pointer-events-none z-10" />
             <div className="absolute inset-0 border-[16px] md:border-[24px] border-hagull-600/10 rounded-3xl z-20 pointer-events-none" />
-            
+
             <Image
               src="/team.jpeg"
               alt="Hagull team at work"
@@ -74,7 +74,7 @@ export default function CareersHero() {
               priority
             />
           </motion.div>
-          
+
         </div>
       </div>
     </section>

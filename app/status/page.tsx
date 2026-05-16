@@ -19,7 +19,7 @@ export default function StatusPage() {
       
       <main id="main-content" className="flex-1 pt-32 pb-24">
         <div className="container-fluid max-w-4xl">
-          <div className="bg-emerald-500 rounded-2xl p-8 text-white shadow-glow mb-12 flex items-center justify-between">
+          <div className="bg-emerald-500 rounded-2xl p-8 text-white shadow-glow mb-12 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
             <div>
               <h1 className="text-3xl font-extrabold mb-2">All Systems Operational</h1>
               <p className="text-sm font-medium text-white/80">Last updated: Just now</p>

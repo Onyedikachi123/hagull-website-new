@@ -19,7 +19,7 @@ export default function MarketsPage() {
       <Navbar />
       
       <main id="main-content" className="flex-1 pt-24 pb-20">
-        <div className="container-fluid max-w-[1400px]">
+        <div className="container-fluid">
           
           <MarketStats />
 

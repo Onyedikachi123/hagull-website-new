@@ -33,7 +33,7 @@ const DIGITAL_ASSETS = [
 export default function GlobalReach() {
   return (
     <section className="section-pad bg-surface-bright" aria-labelledby="global-reach-heading">
-      <div className="container-fluid max-w-6xl">
+      <div className="container-fluid">
         <FadeIn direction="up" className="text-center max-w-2xl mx-auto mb-16">
           <h2
             id="global-reach-heading"

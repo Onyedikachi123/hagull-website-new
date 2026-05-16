@@ -26,16 +26,16 @@ const InstagramIcon = () => (
 )
 
 const socialLinks = [
-  { Icon: XIcon,         href: BRAND.twitter,   label: 'Twitter / X' },
-  { Icon: FacebookIcon,  href: BRAND.facebook,  label: 'Facebook' },
-  { Icon: LinkedInIcon,  href: BRAND.linkedin,  label: 'LinkedIn' },
+  { Icon: XIcon, href: BRAND.twitter, label: 'Twitter / X' },
+  { Icon: FacebookIcon, href: BRAND.facebook, label: 'Facebook' },
+  { Icon: LinkedInIcon, href: BRAND.linkedin, label: 'LinkedIn' },
   { Icon: InstagramIcon, href: BRAND.instagram, label: 'Instagram' },
 ]
 
 const footerSections = [
-  { title: 'Product',  links: FOOTER_LINKS.product },
-  { title: 'Company',  links: FOOTER_LINKS.company },
-  { title: 'Support',  links: FOOTER_LINKS.support },
+  { title: 'Product', links: FOOTER_LINKS.product },
+  { title: 'Company', links: FOOTER_LINKS.company },
+  { title: 'Support', links: FOOTER_LINKS.support },
 ]
 
 export default function Footer() {
@@ -43,10 +43,10 @@ export default function Footer() {
   return (
     <footer className="bg-surface-950 text-white" aria-label="Site footer">
       <div className="container-fluid pt-16 pb-10">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 pb-12 border-b border-white/10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-10 pb-12 border-b border-white/10">
           {/* Brand column */}
-          <div className="lg:col-span-2 space-y-5">
-            <Link href="/" aria-label="Hagull — Home">
+          <div className="md:col-span-2 space-y-6">
+            <Link href="/" aria-label="Hagull — Home" className="inline-block">
               <div className="relative w-[110px] h-[32px]">
                 <Image
                   src="/logo.png"
@@ -56,23 +56,23 @@ export default function Footer() {
                 />
               </div>
             </Link>
-            <p className="text-sm text-white/55 leading-relaxed max-w-xs">
+            <p className="text-sm text-white/55 leading-relaxed">
               {BRAND.description}
             </p>
-            <ul className="space-y-2.5">
-              <li className="flex items-center gap-2.5 text-sm text-white/55">
+            <ul className="space-y-3">
+              <li className="flex items-center gap-3 text-sm text-white/55">
                 <Mail size={14} className="text-hagull-400 shrink-0" />
                 <a href={`mailto:${BRAND.email}`} className="hover:text-white transition-colors">
                   {BRAND.email}
                 </a>
               </li>
-              <li className="flex items-center gap-2.5 text-sm text-white/55">
+              <li className="flex items-center gap-3 text-sm text-white/55">
                 <MapPin size={14} className="text-hagull-400 shrink-0" />
                 <span>{BRAND.location}</span>
               </li>
             </ul>
             {/* Social icons */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 pt-2">
               {socialLinks.map(({ Icon, href, label }) => (
                 <a
                   key={label}
@@ -80,7 +80,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="w-8 h-8 flex items-center justify-center rounded-lg bg-white/5 hover:bg-hagull-500/20 hover:text-hagull-400 text-white/40 transition-all duration-200"
+                  className="w-9 h-9 flex items-center justify-center rounded-lg bg-white/5 hover:bg-hagull-500/20 hover:text-hagull-400 text-white/40 transition-all duration-200 border border-white/5 hover:border-hagull-500/30"
                 >
                   <Icon />
                 </a>
@@ -89,13 +89,13 @@ export default function Footer() {
           </div>
 
           {/* Link Columns */}
-          <div className="lg:col-span-3 grid grid-cols-2 sm:grid-cols-3 gap-8">
+          <div className="md:col-span-2 lg:col-span-3 grid grid-cols-2 sm:grid-cols-3 gap-8 md:gap-10">
             {footerSections.map(({ title, links }) => (
-              <div key={title}>
-                <h3 className="text-xs font-semibold uppercase tracking-widest text-white/30 mb-4">
+              <div key={title} className="space-y-5">
+                <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-white/30">
                   {title}
                 </h3>
-                <ul className="space-y-2.5">
+                <ul className="space-y-3">
                   {links.map(({ label, href }) => (
                     <li key={`${label}-${href}`}>
                       <Link
@@ -105,7 +105,7 @@ export default function Footer() {
                         {label}
                         <ArrowUpRight
                           size={12}
-                          className="opacity-0 group-hover:opacity-60 transition-all duration-200"
+                          className="opacity-0 -translate-y-0.5 translate-x-0.5 group-hover:opacity-60 transition-all duration-200"
                         />
                       </Link>
                     </li>
@@ -117,16 +117,17 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-white/35">
-            © {year} Hagull Ltd. All rights reserved. Registered in England & Wales.
+        <div className="pt-10 flex flex-col-reverse sm:flex-row items-center justify-between gap-6 sm:gap-4">
+          <p className="text-[11px] text-white/35 text-center sm:text-left leading-relaxed">
+            © {year} Hagull Ltd. All rights reserved. Registered in England & Wales.<br className="hidden sm:block" />
+            Empowering global P2P infrastructure across Africa and beyond.
           </p>
-          <ul className="flex items-center gap-5">
+          <ul className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
             {FOOTER_LINKS.legal.map(({ label, href }) => (
               <li key={`${label}-${href}`}>
                 <Link
                   href={href}
-                  className="text-xs text-white/35 hover:text-white/70 transition-colors duration-200"
+                  className="text-[11px] font-medium text-white/35 hover:text-white/70 transition-colors duration-200"
                 >
                   {label}
                 </Link>

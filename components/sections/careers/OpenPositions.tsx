@@ -41,7 +41,7 @@ export default function OpenPositions() {
             <p className="text-sm text-muted-foreground">Current opportunities to make an impact.</p>
           </div>
           
-          <div className="flex gap-3">
+          <div className="flex flex-wrap gap-3">
             <select 
               className="bg-white border border-border text-xs font-semibold px-4 py-2 rounded-lg outline-none focus:ring-2 focus:ring-hagull-500"
               value={teamFilter}

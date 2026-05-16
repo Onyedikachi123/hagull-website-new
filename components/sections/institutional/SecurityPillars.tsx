@@ -8,7 +8,7 @@ import Link from 'next/link'
 export default function SecurityPillars() {
   return (
     <section className="section-pad bg-white" aria-labelledby="pillars-heading">
-      <div className="container-fluid max-w-6xl">
+      <div className="container-fluid">
         <FadeIn direction="up" className="max-w-3xl mb-16">
           <h2 id="pillars-heading" className="text-3xl font-extrabold text-foreground tracking-tight mb-4">
             Our Security Pillars
