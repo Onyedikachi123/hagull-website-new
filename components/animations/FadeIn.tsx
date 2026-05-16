@@ -6,7 +6,7 @@ import { cn } from '@/lib/utils'
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 interface FadeInProps {
-  children: ReactNode
+  children?: ReactNode
   className?: string
   delay?: number
   duration?: number
@@ -17,14 +17,14 @@ interface FadeInProps {
 }
 
 interface StaggerContainerProps {
-  children: ReactNode
+  children?: ReactNode
   className?: string
   staggerDelay?: number
   delayStart?: number
 }
 
 interface StaggerItemProps {
-  children: ReactNode
+  children?: ReactNode
   className?: string
   index?: number
 }
@@ -132,7 +132,7 @@ export function ScaleIn({
   className,
   delay = 0,
 }: {
-  children: ReactNode
+  children?: ReactNode
   className?: string
   delay?: number
 }) {
@@ -158,7 +158,7 @@ export function RevealText({
   className,
   delay = 0,
 }: {
-  children: ReactNode
+  children?: ReactNode
   className?: string
   delay?: number
 }) {

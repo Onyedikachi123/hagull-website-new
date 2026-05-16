@@ -52,7 +52,8 @@ export default function Footer() {
                   src="/logo.png"
                   alt="Hagull"
                   fill
-                  className="object-contain brightness-0 invert"
+                  className="object-contain"
+                  priority
                 />
               </div>
             </Link>

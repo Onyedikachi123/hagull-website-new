@@ -111,9 +111,11 @@ export default function P2PTable() {
                   </div>
                 </td>
                 <td className="px-6 py-5 text-right">
-                  <button className="inline-flex items-center justify-center px-4 py-2 bg-hagull-600 hover:bg-hagull-700 text-white font-bold text-xs rounded-lg shadow-sm transition-colors w-full max-w-[140px]">
-                    Chat with Vendor
-                  </button>
+                  <Link href="/register">
+                    <button className="inline-flex items-center justify-center px-4 py-2 bg-hagull-600 hover:bg-hagull-700 text-white font-bold text-xs rounded-lg shadow-sm transition-colors w-full max-w-[140px]">
+                      Hagull
+                    </button>
+                  </Link>
                 </td>
               </tr>
             ))}
